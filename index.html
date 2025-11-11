@@ -10,13 +10,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-gray-900 text-gray-300 font-sans">
+    <!-- Mobile Top Bar (visible on small screens) -->
+    <div id="mobile-header" class="bg-gray-800 px-3 py-2 flex items-center gap-3 sticky top-0 z-50" style="display:none">
+        <button id="hamburger-top" aria-label="Open Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-blue-400">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <h1 class="text-xl font-semibold text-white">DICT Reviewer</h1>
+    </div>
     <div class="flex h-screen">
         <!-- Sidebar -->
         <div id="sidebar" class="bg-gray-800 w-72 p-6 flex flex-col justify-between">
             <div>
                 <div class="flex items-center space-x-3 mb-10">
-                    <!-- Add Hamburger for Mobile -->
-                    <button id="hamburger-btn" class="md:hidden mr-2" aria-label="Open Menu" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-blue-400"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg></button>
                     <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     <h1 class="text-2xl font-bold text-white">DICT Reviewer</h1>
                 </div>
@@ -78,22 +85,29 @@
 
     <script src="js/script.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function () {
-  var btn = document.getElementById('hamburger-btn');
   var sidebar = document.getElementById('sidebar');
-  function updateHamburger() {
-    if(window.innerWidth <= 820) {
-      btn.style.display = '';
+  var topBtn = document.getElementById('hamburger-top');
+  var mobileHeader = document.getElementById('mobile-header');
+
+  function updateMobileUI() {
+    if (window.innerWidth <= 820) {
+      if (mobileHeader) mobileHeader.style.display = '';
+      // ensure sidebar is hidden by default on mobile
       sidebar.classList.remove('mobile-open');
     } else {
-      btn.style.display = 'none';
+      if (mobileHeader) mobileHeader.style.display = 'none';
       sidebar.classList.remove('mobile-open');
     }
   }
-  btn.addEventListener('click', function() {
-    sidebar.classList.toggle('mobile-open');
-  });
-  window.addEventListener('resize', updateHamburger);
-  updateHamburger();
+
+  if (topBtn) {
+    topBtn.addEventListener('click', function () {
+      sidebar.classList.toggle('mobile-open');
+    });
+  }
+
+  window.addEventListener('resize', updateMobileUI);
+  updateMobileUI();
 });</script>
     <script>hljs.highlightAll();</script>
 </body>
