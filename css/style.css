@@ -366,7 +366,7 @@ body, .problem-card, .problem-card-answer, ul, li, p, .reveal-answer-btn {
   #topic-nav {
     display: flex !important;
     flex-direction: column !important;
-    gap: 0.35rem !important;
+    gap: 0.5rem !important;
     margin-top: 0.5rem !important;
     flex: 1;
     overflow-y: auto;
@@ -397,25 +397,25 @@ body, .problem-card, .problem-card-answer, ul, li, p, .reveal-answer-btn {
     margin-top: 0 !important;
   }
   #topic-nav button {
-    padding: 0.5rem 0.75rem !important;
-    font-size: 0.8rem !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem !important;
     min-height: auto !important;
     margin: 0 !important;
-    line-height: 1.3;
+    line-height: 1.4;
   }
   #topic-nav button svg {
-    width: 1.15rem !important;
-    height: 1.15rem !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
     flex-shrink: 0;
   }
   #topic-nav button span {
-    font-size: 0.8rem !important;
-    line-height: 1.3;
+    font-size: 0.95rem !important;
+    line-height: 1.4;
     flex: 1;
   }
-  /* Reduce icon spacing on mobile */
+  /* Increase icon spacing on mobile for better visual separation */
   #topic-nav button.space-x-3 > * + * {
-    margin-left: 0.5rem !important;
+    margin-left: 0.75rem !important;
   }
   /* Reduce header size and spacing on mobile */
   #sidebar h1 {
