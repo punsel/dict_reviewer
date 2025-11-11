@@ -159,6 +159,14 @@
     background-color: rgba(17, 24, 39, 0.8);
     border-radius: 0.375rem;
     border: 1px solid #374151;
+    /* New: prevent overlap/overflow */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 /* Syntax highlighting fine-tuning */
@@ -396,3 +404,19 @@ body, .problem-card, .problem-card-answer, ul, li, p, .reveal-answer-btn {
     padding-bottom: 0.65rem !important;
   }
 }
+
+#sidebar-close {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.25rem;
+}
+@media (max-width: 820px) {
+  #sidebar-close { display: inline-flex !important; align-items: center; justify-content: center; }
+  #sidebar-close svg { width: 2rem; height: 2rem; }
+}
+
+/* Ensure code blocks don't overflow */
+.problem-card-code { overflow-x: auto; }
+.problem-card pre { white-space: pre-wrap; word-wrap: break-word; overflow-wrap: anywhere; }
+.problem-card pre code { white-space: pre-wrap; }

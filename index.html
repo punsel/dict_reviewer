@@ -23,9 +23,15 @@
         <!-- Sidebar -->
         <div id="sidebar" class="bg-gray-800 w-72 p-6 flex flex-col justify-between">
             <div>
-                <div class="flex items-center space-x-3 mb-10">
+                <div class="flex items-center space-x-3 mb-10" style="position:relative">
                     <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     <h1 class="text-2xl font-bold text-white">DICT Reviewer</h1>
+                    <!-- Close button (mobile only) -->
+                    <button id="sidebar-close" aria-label="Close Menu" class="ml-auto" style="display:none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-gray-300">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
                 <nav id="topic-nav" class="space-y-2">
                     <button class="w-full flex items-center space-x-3 py-3 px-4 rounded-lg transition-all" data-topic="program-simulation">
@@ -87,15 +93,19 @@
     <script>document.addEventListener('DOMContentLoaded', function () {
   var sidebar = document.getElementById('sidebar');
   var topBtn = document.getElementById('hamburger-top');
+  var closeBtn = document.getElementById('sidebar-close');
   var mobileHeader = document.getElementById('mobile-header');
+  var topicButtons = document.querySelectorAll('#topic-nav button');
 
   function updateMobileUI() {
     if (window.innerWidth <= 820) {
       if (mobileHeader) mobileHeader.style.display = '';
+      if (closeBtn) closeBtn.style.display = '';
       // ensure sidebar is hidden by default on mobile
       sidebar.classList.remove('mobile-open');
     } else {
       if (mobileHeader) mobileHeader.style.display = 'none';
+      if (closeBtn) closeBtn.style.display = 'none';
       sidebar.classList.remove('mobile-open');
     }
   }
@@ -103,6 +113,20 @@
   if (topBtn) {
     topBtn.addEventListener('click', function () {
       sidebar.classList.toggle('mobile-open');
+    });
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      sidebar.classList.remove('mobile-open');
+    });
+  }
+  if (topicButtons && topicButtons.length) {
+    topicButtons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if (window.innerWidth <= 820) {
+          sidebar.classList.remove('mobile-open');
+        }
+      });
     });
   }
 
