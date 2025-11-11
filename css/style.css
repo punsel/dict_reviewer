@@ -420,3 +420,43 @@ body, .problem-card, .problem-card-answer, ul, li, p, .reveal-answer-btn {
 .problem-card-code { overflow-x: auto; }
 .problem-card pre { white-space: pre-wrap; word-wrap: break-word; overflow-wrap: anywhere; }
 .problem-card pre code { white-space: pre-wrap; }
+
+/* Table Styling */
+.problem-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+.problem-card table th {
+    background-color: rgba(55, 65, 81, 0.8);
+    font-weight: 600;
+    text-align: left;
+}
+.problem-card table td, .problem-card table th {
+    padding: 0.75rem 1rem;
+    border: 1px solid #374151;
+}
+.problem-card table tr:nth-child(even) {
+    background-color: rgba(31, 41, 55, 0.5);
+}
+.problem-card table tr:hover {
+    background-color: rgba(55, 65, 81, 0.3);
+}
+
+/* Mobile table responsiveness */
+@media (max-width: 820px) {
+    .problem-card table {
+        font-size: 0.9em;
+    }
+    .problem-card table td, .problem-card table th {
+        padding: 0.5rem 0.6rem;
+    }
+}
+@media (max-width: 520px) {
+    .problem-card table {
+        font-size: 0.85em;
+    }
+    .problem-card table td, .problem-card table th {
+        padding: 0.4rem 0.5rem;
+    }
+}
