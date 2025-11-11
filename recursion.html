@@ -1,5 +1,128 @@
 <h1>Recursion</h1>
-<div>
-    <!-- Content for Recursion will go here -->
-    <p>This is a placeholder for Recursion.</p>
+<div class="space-y-6">
+<!-- Intro Card -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">✅ What is Recursion?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Explanation</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Recursion is a programming technique where a method calls itself to solve a problem.</p>
+      <table class="text-md mt-3 mb-3 border border-gray-600 w-full text-left">
+        <tr><th class="px-2 py-1">Part</th><th class="px-2 py-1">Meaning</th><th class="px-2 py-1">Example</th></tr>
+        <tr><td class="px-2 py-1">Base Case</td><td class="px-2 py-1">The stopping condition (when to stop recursion)</td><td class="px-2 py-1">e.g., when n == 0</td></tr>
+        <tr><td class="px-2 py-1">Recursive Case</td><td class="px-2 py-1">The part where the function calls itself</td><td class="px-2 py-1">calling func(n - 1)</td></tr>
+      </table>
+      <p class="text-gray-400 mt-2 text-sm">Without a base case, recursion will create infinite calls → leading to a stack overflow.</p>
+      <ul class="text-green-400 mt-2 text-md">
+        <li>Recursion solves problems by breaking a big problem into smaller sub-problems</li>
+        <li>Solving each small part until the base case is reached</li>
+      </ul>
+    </div>
+  </div>
 </div>
+
+<!-- Factorial -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">1. Factorial of a Number</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Solution</span></button>
+    <div class="answer-content">
+      <p class="mb-1 text-green-400">Problem: Compute n! (factorial)</p>
+      <p class="mb-1 text-gray-400">5! = 5 × 4 × 3 × 2 × 1</p>
+      <pre><code class="language-java">public static int factorial(int n) {
+    if (n == 0) return 1;        // Base Case
+    return n * factorial(n - 1); // Recursive Case
+}</code></pre>
+      <p class="mt-2 text-gray-400 text-sm italic">Explanation: factorial(5) calls → 5 * factorial(4) → keeps going until factorial(0) returns 1.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Sum -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">2. Sum of First N Natural Numbers</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Solution</span></button>
+    <div class="answer-content">
+      <p class="mb-1 text-green-400">Problem: Compute: 1 + 2 + 3 + ... + n</p>
+      <pre><code class="language-java">public static int sum(int n) {
+    if (n == 0) return 0;        // Base Case
+    return n + sum(n - 1);       // Recursive Case
+}</code></pre>
+      <p class="mt-2 text-gray-400 text-sm italic">Explanation: Breaks sum(5) → 5 + sum(4) → ... → until sum(0) returns 0.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Fibonacci -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">3. Fibonacci Sequence</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Solution</span></button>
+    <div class="answer-content">
+      <p class="mb-1 text-green-400">Problem: Compute the nth Fibonacci number.</p>
+      <p class="mb-1 text-gray-400">F(0)=0, F(1)=1 | F(n) = F(n-1) + F(n-2)</p>
+      <pre><code class="language-java">public static int fib(int n) {
+    if (n <= 1) return n;                  // Base Case
+    return fib(n - 1) + fib(n - 2);        // Recursive Case
+}</code></pre>
+      <p class="mt-2 text-gray-400 text-sm italic">Explanation: Each call splits into two smaller calls, forming a recursion tree.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Reverse String -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">4. Reverse a String</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Solution</span></button>
+    <div class="answer-content">
+      <p class="mb-1 text-green-400">Problem: Reverse a string using recursion.</p>
+      <pre><code class="language-java">public static String reverse(String s) {
+    if (s.isEmpty()) return s;                   // Base Case
+    return reverse(s.substring(1)) + s.charAt(0); // Recursive Case
+}</code></pre>
+      <p class="mt-2 text-gray-400 text-sm italic">Explanation: Remove the first character, reverse the rest, then append character back.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Count Digits -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">5. Count Digits of a Number</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Solution</span></button>
+    <div class="answer-content">
+      <p class="mb-1 text-green-400">Problem: Count how many digits in a number n.</p>
+      <pre><code class="language-java">public static int countDigits(int n) {
+    if (n == 0) return 0;                // Base Case
+    return 1 + countDigits(n / 10);      // Recursive Case
+}</code></pre>
+      <p class="mt-2 text-gray-400 text-sm italic">Explanation: Dividing by 10 removes the last digit each time until nothing left.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+<script>
+    document.querySelectorAll('.reveal-answer-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const answerContent = button.nextElementSibling;
+            const isVisible = answerContent.style.display === 'block';
+            answerContent.style.display = isVisible ? 'none' : 'block';
+            button.querySelector('span').textContent = isVisible ? 'Show Solution' : 'Hide Solution';
+        });
+    });
+</script>
