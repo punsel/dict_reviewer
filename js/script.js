@@ -19,8 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(data, 'text/html');
                 
-                const newTitle = doc.querySelector('h1')?.textContent || 'Untitled';
-                const newContent = doc.body.innerHTML;
+                const newTitle = (doc.querySelector('h1') && doc.querySelector('h1').textContent) || 'Untitled';
+                // Extract only the main content (avoid duplicating the H1 inside content)
+                let newContent = '';
+                const afterH1 = doc.querySelector('h1 + *');
+                const knownContainer = doc.querySelector('.space-y-6, .space-y-8');
+                if (afterH1) {
+                    newContent = afterH1.outerHTML;
+                } else if (knownContainer) {
+                    newContent = knownContainer.outerHTML;
+                } else {
+                    newContent = Array.from(doc.body.children)
+                        .filter(el => el.tagName !== 'H1')
+                        .map(el => el.outerHTML)
+                        .join('');
+                }
 
                 topicTitle.textContent = newTitle;
                 topicContent.innerHTML = newContent;
@@ -48,7 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const answerContent = newButton.nextElementSibling;
                 const isVisible = answerContent.style.display === 'block';
                 answerContent.style.display = isVisible ? 'none' : 'block';
-                newButton.querySelector('span').textContent = isVisible ? 'Reveal Answer' : 'Hide Answer';
+                const labelSpan = newButton.querySelector('span');
+                if (labelSpan) {
+                    labelSpan.textContent = isVisible ? 'Reveal Answer' : 'Hide Answer';
+                } else {
+                    newButton.textContent = isVisible ? 'Show Answer' : 'Hide Answer';
+                }
             });
         });
 
