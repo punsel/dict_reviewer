@@ -541,6 +541,69 @@ for(int i = s.length()-1; i >= 0; i--){
         </div>
     </div>
     
+    <!-- Question 21 -->
+    <div class="problem-card">
+        <div class="problem-card-header">
+            <h3 class="text-lg font-semibold text-white">Question 21</h3>
+        </div>
+        <div class="problem-card-code">
+            <button class="copy-code-btn" title="Copy code"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
+            <pre><code class="language-java">int a = 5, b = 2;
+a = a++ + ++b;
+b = b + a;
+System.out.println(a + " " + b);</code></pre>
+        </div>
+        <div class="problem-card-answer">
+            <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg><span>Show Answer</span></button>
+            <div class="answer-content">
+                <p class="font-mono text-green-400">Answer: <span class="font-bold">8 11</span></p>
+                <p class="text-gray-400 mt-2 text-sm italic">(a++ returns 5, ++b is 3, so a=5+3=8, then b=3+8=11)</p>
+            </div>
+        </div>
+    </div>
+    <!-- Question 22 -->
+    <div class="problem-card">
+        <div class="problem-card-header">
+            <h3 class="text-lg font-semibold text-white">Question 22</h3>
+        </div>
+        <div class="problem-card-code">
+            <button class="copy-code-btn" title="Copy code"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
+            <pre><code class="language-java">int x = 10;
+for(int i = 1; i <= 3; i++){
+    x -= i;
+}
+System.out.println(x);</code></pre>
+        </div>
+        <div class="problem-card-answer">
+            <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg><span>Show Answer</span></button>
+            <div class="answer-content">
+                <p class="font-mono text-green-400">Answer: <span class="font-bold">4</span></p>
+                <p class="text-gray-400 mt-2 text-sm italic">(10-1=9, 9-2=7, 7-3=4)</p>
+            </div>
+        </div>
+    </div>
+    <!-- Question 23 -->
+    <div class="problem-card">
+        <div class="problem-card-header">
+            <h3 class="text-lg font-semibold text-white">Question 23</h3>
+        </div>
+        <div class="problem-card-code">
+            <button class="copy-code-btn" title="Copy code"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg></button>
+            <pre><code class="language-java">int x = 5;
+while(x-- > 2){
+    System.out.print(x + " ");
+}</code></pre>
+        </div>
+        <div class="problem-card-answer">
+            <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg><span>Show Answer</span></button>
+            <div class="answer-content">
+                <p class="font-mono text-green-400">Answer: <span class="font-bold">4 3 2</span></p>
+                <p class="text-gray-400 mt-2 text-sm italic">(Post-decrement happens after comparison)</p>
+            </div>
+        </div>
+    </div>
+   
+    
 </div>
 <script>
     document.querySelectorAll('.reveal-answer-btn').forEach(button => {
