@@ -1,5 +1,292 @@
 <h1>Data Structures</h1>
-<div>
-    <!-- Content for Data Structures will go here -->
-    <p>This is a placeholder for Data Structures.</p>
+<div class="space-y-6">
+<!-- Q1 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">1. What is a Data Structure?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A data structure is a method of organizing and storing data so that it can be accessed and modified efficiently.</span></p>
+      <p class="text-gray-400 mt-2 text-sm italic">Key Idea: Different tasks require different data structures to optimize speed and memory.</p>
+    </div>
+  </div>
 </div>
+
+<!-- Q2 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">2. What is the difference between Primitive and Non-Primitive Data Structures?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer:<br><br>
+        <span class="font-bold">Primitive:</span> Basic built-in types (int, char, float).<br><br>
+        <span class="font-bold">Non-Primitive:</span> Organized collections (arrays, lists, stacks, queues, trees).</p>
+      <p class="text-gray-400 mt-2 text-sm italic">Key Idea: Non-primitive structures are used to store larger and complex collections of data.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q3 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">3. What is an Array?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">An array is a collection of elements stored in contiguous memory locations, accessed using an index.</span></p>
+      <p class="text-gray-400 mt-2 text-sm italic">Time Complexity: Access = O(1).</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q4 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">4. Why is array insertion costly?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">Because inserting requires shifting elements, resulting in O(n) time complexity.</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- Q5 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">5. What is a Linked List?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A linked list is a linear structure where each element (node) stores data and a reference to the next node.</span></p>
+      <p class="text-gray-400 mt-2 text-sm italic">Advantage: Fast insert/delete = O(1) when position is known.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q6 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">6. What is the drawback of Linked Lists compared to Arrays?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">No direct indexing; accessing an element requires traversal (O(n)).</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- Q7 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">7. Differentiate Singly and Doubly Linked Lists.</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer:<br><br>
+        <span class="font-bold">Singly:</span> Each node has one pointer (next).<br><br>
+        <span class="font-bold">Doubly:</span> Each node has two pointers (next and prev) → allows two-way traversal.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q8 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">8. What is a Stack?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A stack is a LIFO (Last In, First Out) data structure.</span></p>
+      <p class="text-gray-400 mt-2 text-sm italic">Examples: Undo operations, function call stack.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q9 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">9. What are the primary operations in a Stack?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer:<br><br>
+        <span class="font-bold">push()</span> → insert<br>
+        <span class="font-bold">pop()</span> → remove<br>
+        <span class="font-bold">peek()</span> → view top element
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Q10 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">10. What is a Queue?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A queue is a FIFO (First In, First Out) structure.</span></p>
+      <p class="text-gray-400 mt-2 text-sm italic">Example: Scheduling tasks, printer jobs.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q11 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">11. What is a Circular Queue?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A queue where the last position connects back to the first to reduce wasted space.</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- Q12 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">12. What is a Binary Tree?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A hierarchical data structure where each node has at most two children.</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- Q13 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">13. What is a Binary Search Tree (BST)?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A binary tree where:</span><br><br>Left subtree &lt; Root &lt; Right subtree</p>
+      <p class="text-gray-400 mt-2 text-sm italic">Search Time: Best = O(log n), Worst (skewed) = O(n).</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q14 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">14. What causes a BST to become unbalanced?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">Inserting elements in sorted order, causing it to resemble a linked list, increasing search time.</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- Q15 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">15. What is Tree Traversal? Name types.</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">Visiting all nodes.</span><br><br>
+      In-order (L, Root, R)<br>Pre-order (Root, L, R)<br>Post-order (L, R, Root)</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q16 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">16. What is a Hash Table?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A structure that stores data in key-value pairs using a hash function.</span></p>
+      <p class="text-gray-400 mt-2 text-sm italic">Search Time: Average = O(1).</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q17 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">17. What is a Hash Collision and how is it resolved?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">When two keys hash to the same index.</span></p>
+      <p class="text-gray-400 mt-2 text-sm italic">Solution: Chaining (linked list per bucket) or Open Addressing.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q18 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">18. What is Recursion commonly used for in Data Structures?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">Tree and graph traversal, divide-and-conquer algorithms like QuickSort.</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- Q19 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">19. Define Time Complexity.</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">A measure of how execution time grows with input size n.</span></p>
+      <p class="text-gray-400 mt-2 text-sm italic">Examples: O(1), O(log n), O(n), O(n²)</p>
+    </div>
+  </div>
+</div>
+
+<!-- Q20 -->
+<div class="problem-card">
+  <div class="problem-card-header">
+    <h3 class="text-lg font-semibold text-white">20. Which data structure is best for implementing Undo/Redo operations and why?</h3>
+  </div>
+  <div class="problem-card-answer">
+    <button class="reveal-answer-btn"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> <span>Show Answer</span></button>
+    <div class="answer-content">
+      <p class="font-mono text-green-400">Answer: <span class="font-bold">Stack, because it follows LIFO — last action undone first.</span></p>
+    </div>
+  </div>
+</div>
+
+</div>
+<script>
+    document.querySelectorAll('.reveal-answer-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const answerContent = button.nextElementSibling;
+            const isVisible = answerContent.style.display === 'block';
+            answerContent.style.display = isVisible ? 'none' : 'block';
+            button.querySelector('span').textContent = isVisible ? 'Show Answer' : 'Hide Answer';
+        });
+    });
+</script>
